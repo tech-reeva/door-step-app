@@ -67,7 +67,7 @@ export default defineNuxtConfig({
     ],
     '@nuxt/image',
     '@vite-pwa/nuxt',
-    'nuxt-vitest',
+    //'nuxt-vitest',
     'nuxt-lazy-hydrate',
     '@vue-storefront/nuxt',
   ],
