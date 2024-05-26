@@ -1,12 +1,18 @@
 <template>
-  <div>
-    <NuxtWelcome />
-    <SfButton class="w-full"> Hello </SfButton>
-
-  </div>
+  <Body class="font-body" :class="bodyClass" />
+  <VitePwaManifest />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
-<script lang="ts" setup>
-import { SfButton } from '@storefront-ui/vue';
-</script>
+<script setup lang="ts">
+usePageTitle();
 
+const bodyClass = ref('');
+
+onMounted(() => {
+  // Need this class for cypress testing
+  bodyClass.value = 'hydrated';
+});
+</script>
