@@ -36,9 +36,9 @@ export function DefaultLayout({ children, breadcrumbs = [] }: LayoutPropsType): 
         >
           <span>{t('allProductsLinkText')}</span>
         </SfButton>
-        <Search className="hidden md:block flex-1" />
+        {/* <Search className="hidden md:block flex-1" /> */}
         <nav className="hidden md:flex md:flex-row md:flex-nowrap">
-          <SfButton
+          {/* <SfButton
             className="mr-2 -ml-0.5 text-white bg-primary-700 hover:bg-primary-800 hover:text-white active:bg-primary-900 active:text-white"
             as={Link}
             href="/cart"
@@ -48,6 +48,42 @@ export function DefaultLayout({ children, breadcrumbs = [] }: LayoutPropsType): 
             slotPrefix={
               <Badge bordered value={cartLineItemsCount} className="text-neutral-900 bg-white">
                 <SfIconShoppingCart />
+              </Badge>
+            }
+          /> */}
+          <SfButton
+            className="mr-2 -ml-0.5 text-white bg-primary-700 hover:bg-primary-800 hover:text-white active:bg-primary-900 active:text-white"
+            as={Link}
+            href="#"
+            variant="tertiary"
+            square
+            slotPrefix={
+              <Badge bordered className="text-neutral-900 bg-white">
+                Register As A Professional
+              </Badge>
+            }
+          />
+                    <SfButton
+            className="mr-2 -ml-0.5 text-white bg-primary-700 hover:bg-primary-800 hover:text-white active:bg-primary-900 active:text-white"
+            as={Link}
+            href="#"
+            variant="tertiary"
+            square
+            slotPrefix={
+              <Badge bordered className="text-neutral-900 bg-white">
+                Help
+              </Badge>
+            }
+          />
+          <SfButton
+            className="mr-2 -ml-0.5 text-white bg-primary-700 hover:bg-primary-800 hover:text-white active:bg-primary-900 active:text-white"
+            as={Link}
+            href="#"
+            variant="tertiary"
+            square
+            slotPrefix={
+              <Badge bordered className="text-neutral-900 bg-white">
+                Login/Sign Up
               </Badge>
             }
           />
